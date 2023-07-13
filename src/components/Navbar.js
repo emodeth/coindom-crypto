@@ -1,6 +1,22 @@
+import { useEffect, useState } from "react";
+
 export default function Navbar() {
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(function () {
+    function handleSticky() {
+      if (window.scrollY >= 120) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleSticky);
+  });
+
   return (
-    <nav className="navbar">
+    <nav className={isSticky ? "navbar sticky-navbar" : "navbar"}>
       <div className="navbar-container">
         <a href="/">COINDOM</a>
         <ul>

@@ -3,16 +3,16 @@ export default function Footer() {
     <footer className="footer-container">
       <ul className="footer-brands">
         <li>
-          <i class="fa-brands fa-twitter"></i>
+          <i className="fa-brands fa-twitter"></i>
         </li>
         <li>
-          <i class="fa-brands fa-discord"></i>
+          <i className="fa-brands fa-discord"></i>
         </li>
         <li>
-          <i class="fa-brands fa-facebook"></i>
+          <i className="fa-brands fa-facebook"></i>
         </li>
         <li>
-          <i class="fa-brands fa-youtube"></i>
+          <i className="fa-brands fa-youtube"></i>
         </li>
       </ul>
 

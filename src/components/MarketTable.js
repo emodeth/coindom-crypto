@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import Loader from "./Loader";
 
 export default function MarketTable() {
   const [coinsList, setCoinList] = useState([]);
   const [activePage, setActivePage] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(
     function () {
@@ -21,8 +23,8 @@ export default function MarketTable() {
 
         const res = await fetch(url, options);
         const data = await res.json();
-
         setCoinList(data.data.coins);
+        setIsLoading(false);
       }
       fetchCoin(activePage);
     },
@@ -40,9 +42,13 @@ export default function MarketTable() {
           <p>24h Change </p>
           <p>Market Cap</p>
         </div>
-        {coinsList.map((coin) => (
-          <MarketTableItem key={coin.uuid} coin={coin} />
-        ))}
+        {isLoading ? (
+          <Loader />
+        ) : (
+          coinsList.map((coin) => (
+            <MarketTableItem key={coin.uuid} coin={coin} />
+          ))
+        )}
         <MarketTableNavigator
           activePage={activePage}
           onActivePage={setActivePage}

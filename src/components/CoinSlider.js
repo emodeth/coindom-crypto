@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import Loader from "./Loader";
 
 export default function CoinSlider() {
   const [coinSliderList, setCoinSliderList] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(function () {
     const url =
@@ -18,15 +20,20 @@ export default function CoinSlider() {
       const res = await fetch(url, options);
       const data = await res.json();
       setCoinSliderList(data.data.coins);
+      setIsLoading(false);
     }
     fetchCoin();
   }, []);
 
   return (
     <div className="coin-slider">
-      {coinSliderList.map((coin) => (
-        <CoinSliderItem key={coin.uuid} coin={coin} />
-      ))}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        coinSliderList.map((coin) => (
+          <CoinSliderItem key={coin.uuid} coin={coin} />
+        ))
+      )}
     </div>
   );
 }
