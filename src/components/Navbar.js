@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
-  const [toggle, setToggle] = useState(false);
 
   useEffect(function () {
     function handleSticky() {
@@ -17,23 +16,29 @@ export default function Navbar() {
   });
 
   return (
-    <>
-      <nav className={isSticky ? "navbar sticky-navbar" : "navbar"}>
-        <div className="navbar-container">
-          <a href="/">COINDOM</a>
-          <ul>
-            <li>Home</li>
-            <li>Market</li>
-            <li>Choose Us</li>
-            <li>Join</li>
-          </ul>
+    <nav className={isSticky ? "navbar sticky-navbar" : "navbar"} id="navbar">
+      <div className="navbar-container">
+        <a href="/">COINDOM</a>
+        <ul>
+          <li>
+            <a href="#hero">Home</a>
+          </li>
+          <li>
+            <a href="#market-table">Market</a>
+          </li>
+          <li>
+            <a href="#choose-us">Choose Us</a>
+          </li>
+          <li>
+            <a href="#join-us">Join</a>
+          </li>
+        </ul>
 
-          <span className="icons">
-            <i className="fa-brands fa-twitter"></i>
-            <i className="fa-brands fa-discord"></i>
-          </span>
-        </div>
-      </nav>
-    </>
+        <span className="icons">
+          <i className="fa-brands fa-twitter"></i>
+          <i className="fa-brands fa-discord"></i>
+        </span>
+      </div>
+    </nav>
   );
 }

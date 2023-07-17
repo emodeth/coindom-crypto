@@ -11,6 +11,7 @@ $off-white: #f3f2f4;
   list-style-type: none;
   outline: none;
   border: none;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -113,11 +114,6 @@ body {
   align-items: center;
 
   color: $off-white;
-
-  a {
-    font-size: 30px;
-    font-weight: 700;
-  }
 
   ul {
     display: flex;
@@ -527,9 +523,9 @@ body {
   flex-direction: column;
   gap: 20px;
   cursor: pointer;
-  margin: 0 auto;
   color: $off-white;
   width: 1300px;
+  margin: 0 auto;
   height: 400px;
   background-image: url(assets/footer-bg.png);
   background-position: center;

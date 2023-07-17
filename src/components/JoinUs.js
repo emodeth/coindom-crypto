@@ -3,7 +3,7 @@ import eth from "../assets/eth-float.png";
 
 export default function JoinUs() {
   return (
-    <div className="join-container">
+    <div className="join-container" id="join-us">
       <div className="join-content">
         <img className="btc-float float" src={btc} alt="btc-float" />
         <h1>

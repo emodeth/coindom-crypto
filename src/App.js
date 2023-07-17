@@ -8,13 +8,13 @@ import Footer from "./components/Footer";
 export default function App() {
   return (
     <>
-      <Navbar id="navbar" />
-      <Hero id="hero" />
+      <Navbar />
+      <Hero />
       <div className="background"></div>
-      <MarketTable id="market-table" />
-      <ChooseUs id="choose-us" />
-      <JoinUs id="join-us" />
-      <Footer id="footer" />
+      <MarketTable />
+      <ChooseUs />
+      <JoinUs />
+      <Footer />
     </>
   );
 }

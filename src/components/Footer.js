@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="footer-container">
+    <footer className="footer-container" id="footer">
       <ul className="footer-brands">
         <li>
           <i className="fa-brands fa-twitter"></i>

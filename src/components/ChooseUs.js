@@ -2,7 +2,7 @@ import choose from "../assets/choose-1.png";
 
 export default function ChooseUs() {
   return (
-    <div className="choose-us-container">
+    <div className="choose-us-container" id="choose-us">
       <h2>
         WHY <span>CHOOSE US</span>
       </h2>

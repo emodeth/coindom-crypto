@@ -4,7 +4,7 @@ import CoinSlider from "./CoinSlider";
 
 export default function Hero() {
   return (
-    <div className="hero-container">
+    <div className="hero-container" id="hero">
       <div className="hero-content">
         <img className="btc-float float" src={btc} alt="btc-float" />
         <h1>

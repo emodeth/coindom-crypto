@@ -32,7 +32,7 @@ export default function MarketTable() {
   );
 
   return (
-    <div className="market-table-container">
+    <div className="market-table-container" id="market-table">
       <h2>Market Update</h2>
 
       <div className="market-table">
