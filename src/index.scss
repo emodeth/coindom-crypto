@@ -527,8 +527,9 @@ body {
   flex-direction: column;
   gap: 20px;
   cursor: pointer;
+  margin: 0 auto;
   color: $off-white;
-  width: 100vw;
+  width: 1300px;
   height: 400px;
   background-image: url(assets/footer-bg.png);
   background-position: center;
@@ -554,71 +555,5 @@ body {
 
   .footer-privacy {
     font-size: 18px;
-  }
-}
-
-.navbar__mobile {
-  display: none;
-  width: 100vw;
-  padding: 2rem 1.5rem;
-  align-items: center;
-  justify-content: space-between;
-
-  h1 {
-    color: $off-white;
-    font-size: 30px;
-  }
-
-  button {
-    padding: 0px 10px;
-    background-color: transparent;
-    i {
-      font-size: 32px;
-      color: $off-white;
-    }
-  }
-}
-
-.navbar__mobile-menu {
-  display: none;
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  left: -101%;
-  top: 0;
-  transition: 0.3s;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: $off-white;
-  z-index: 200;
-
-  li {
-    color: #0f051d;
-    font-weight: 600;
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-
-  button {
-    position: absolute;
-    top: 35px;
-    right: 35px;
-    font-size: 30px;
-  }
-}
-
-.menu-up {
-  left: 0 !important;
-}
-
-@media screen and (max-width: 600px) {
-  .navbar {
-    display: none;
-  }
-
-  .navbar__mobile,
-  .navbar__mobile-menu {
-    display: flex;
   }
 }

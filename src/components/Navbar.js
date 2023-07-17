@@ -34,27 +34,6 @@ export default function Navbar() {
           </span>
         </div>
       </nav>
-
-      <nav className="navbar__mobile">
-        <h1>COINDOM</h1>
-        <button onClick={() => setToggle(true)}>
-          <i class="fa-solid fa-bars-staggered hamburger-menu"></i>
-        </button>
-      </nav>
-
-      <ul
-        className={
-          toggle ? "navbar__mobile-menu menu-up" : "navbar__mobile-menu"
-        }
-      >
-        <button onClick={() => setToggle(false)}>
-          <i class="fa-solid fa-xmark close-mobile"></i>
-        </button>
-        <li onClick={() => setToggle(false)}>Home</li>
-        <li onClick={() => setToggle(false)}>Market</li>
-        <li onClick={() => setToggle(false)}>Choose Us</li>
-        <li onClick={() => setToggle(false)}>Join</li>
-      </ul>
     </>
   );
 }
